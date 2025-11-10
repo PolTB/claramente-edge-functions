@@ -1,0 +1,17 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "api/**/*.ts": {
+      "runtime": "edge"
+    },
+    "admin/**/*.ts": {
+      "runtime": "edge"
+    }
+  },
+  "crons": [
+    {
+      "path": "/admin/perf-alerts",
+      "schedule": "0 * * * *"
+    }
+  ]
+}
